@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PlateGuard India — FSSAI-aligned food safety audits and inspections for restaurants, cloud kitchens, and food manufacturers in Mumbai and Pune.">
+<meta name="keywords" content="food safety audit India, FSSAI compliance, restaurant inspection Mumbai, cloud kitchen audit Pune, food hygiene India">
+<meta property="og:title" content="PlateGuard India — Food Safety You Can Trust">
+<meta property="og:description" content="Science-backed food safety inspections and audits for Mumbai and Pune. GLP-grade protocols, 48h reports.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://plateguardindia.com">
+<title>PlateGuard India — Food Safety You Can Trust</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pg-green:#0F6E56;
+  --pg-green-light:#1D9E75;
+  --pg-green-pale:#E1F5EE;
+  --pg-amber:#BA7517;
+  --pg-amber-pale:#FAEEDA;
+  --pg-dark:#1a1a18;
+  --pg-text:#2C2C2A;
+  --pg-muted:#5F5E5A;
+  --pg-border:#D3D1C7;
+  --pg-bg:#FAFAF8;
+  --pg-white:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--pg-text);background:var(--pg-white);line-height:1.6;font-size:16px}
+
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.96);border-bottom:1px solid var(--pg-border);backdrop-filter:blur(8px)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.logo-lockup{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-icon{width:38px;height:38px;border-radius:10px;background:var(--pg-green);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.logo-icon svg{width:22px;height:22px}
+.logo-text{font-size:15px;font-weight:700;color:var(--pg-green);letter-spacing:-0.3px}
+.logo-text span{color:var(--pg-amber);font-weight:700}
+.nav-links{display:flex;gap:1.8rem;list-style:none}
+.nav-links a{text-decoration:none;color:var(--pg-muted);font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover{color:var(--pg-green)}
+.nav-cta{background:var(--pg-green);color:#fff;padding:.45rem 1.1rem;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--pg-green-light)}
+
+.hero{background:linear-gradient(160deg,#0a3d2b 0%,#0F6E56 55%,#1D9E75 100%);min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero-bg-pattern{position:absolute;inset:0;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.hero-inner{max-width:1100px;margin:0 auto;padding:5rem 2rem 4rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);color:#fff;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .9rem;border-radius:20px;margin-bottom:1.5rem}
+.hero h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.2rem,4vw,3.4rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:1.2rem;letter-spacing:-1px}
+.hero h1 em{color:#9FE1CB;font-style:normal}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,0.82);line-height:1.7;margin-bottom:2rem;max-width:480px}
+.hero-actions{display:flex;gap:.9rem;flex-wrap:wrap}
+.btn-primary{background:#fff;color:var(--pg-green);padding:.75rem 1.8rem;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(0,0,0,.12);display:inline-block}
+.btn-primary:hover{background:var(--pg-green-pale);transform:translateY(-1px)}
+.btn-secondary{border:2px solid rgba(255,255,255,0.45);color:#fff;padding:.75rem 1.8rem;border-radius:10px;font-weight:600;font-size:15px;text-decoration:none;transition:all .2s;display:inline-block}
+.btn-secondary:hover{background:rgba(255,255,255,0.1)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.shield-visual{width:300px;height:300px}
+.shield-svg{width:100%;height:100%;filter:drop-shadow(0 20px 40px rgba(0,0,0,0.3))}
+.hero-stats{display:flex;gap:2rem;margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,0.2)}
+.stat-num{font-size:1.8rem;font-weight:800;color:#fff;font-family:'Playfair Display',serif}
+.stat-label{font-size:12px;color:rgba(255,255,255,0.65);letter-spacing:.04em}
+
+.trust-bar{background:var(--pg-green-pale);border-bottom:1px solid #9FE1CB}
+.trust-inner{max-width:1100px;margin:0 auto;padding:1.1rem 2rem;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.5rem;font-size:13px;font-weight:600;color:var(--pg-green)}
+.trust-item svg{width:18px;height:18px;flex-shrink:0}
+
+section{padding:5rem 2rem}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--pg-green);margin-bottom:.6rem}
+.section-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:800;color:var(--pg-dark);line-height:1.2;letter-spacing:-.5px;margin-bottom:1rem}
+.section-sub{font-size:1.05rem;color:var(--pg-muted);max-width:560px;line-height:1.7}
+
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:3rem}
+.service-card{background:var(--pg-white);border:1px solid var(--pg-border);border-radius:16px;padding:1.8rem;transition:all .2s;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--pg-green);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+.service-card:hover{border-color:var(--pg-green);box-shadow:0 8px 30px rgba(15,110,86,.12);transform:translateY(-2px)}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:48px;height:48px;border-radius:12px;background:var(--pg-green-pale);display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem}
+.service-icon svg{width:26px;height:26px;color:var(--pg-green)}
+.service-card h3{font-size:1.1rem;font-weight:700;color:var(--pg-dark);margin-bottom:.5rem}
+.service-card p{font-size:.92rem;color:var(--pg-muted);line-height:1.6}
+.service-tag{display:inline-block;margin-top:.9rem;background:var(--pg-green-pale);color:var(--pg-green);font-size:11px;font-weight:700;letter-spacing:.05em;padding:.25rem .65rem;border-radius:6px}
+
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:2rem}
+.why-points{display:flex;flex-direction:column;gap:1.6rem;margin-top:2rem}
+.why-point{display:flex;gap:1rem;align-items:flex-start}
+.why-num{width:36px;height:36px;border-radius:50%;background:var(--pg-green);color:#fff;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.why-point h4{font-size:1rem;font-weight:700;color:var(--pg-dark);margin-bottom:.25rem}
+.why-point p{font-size:.9rem;color:var(--pg-muted);line-height:1.6}
+.why-image{background:var(--pg-green-pale);border-radius:24px;padding:2.5rem}
+.cert-card{background:#fff;border:1px solid var(--pg-border);border-radius:12px;padding:1.2rem 1.5rem;display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+.cert-dot{width:12px;height:12px;border-radius:50%;background:var(--pg-green);flex-shrink:0}
+.cert-info h5{font-size:.9rem;font-weight:700;color:var(--pg-dark)}
+.cert-info p{font-size:.8rem;color:var(--pg-muted)}
+
+.how-section{background:var(--pg-bg)}
+.steps-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:3rem;position:relative}
+.steps-grid::before{content:'';position:absolute;top:29px;left:10%;right:10%;height:2px;background:repeating-linear-gradient(90deg,var(--pg-green) 0,var(--pg-green) 8px,transparent 8px,transparent 16px);z-index:0}
+.step{text-align:center;padding:0 1.5rem;position:relative;z-index:1}
+.step-num{width:60px;height:60px;border-radius:50%;background:var(--pg-white);border:2px solid var(--pg-green);color:var(--pg-green);font-size:1.2rem;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;font-family:'Playfair Display',serif}
+.step h4{font-size:.95rem;font-weight:700;color:var(--pg-dark);margin-bottom:.4rem}
+.step p{font-size:.85rem;color:var(--pg-muted);line-height:1.6}
+
+.sectors-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin-top:3rem}
+.sector-tile{border:1px solid var(--pg-border);border-radius:14px;padding:1.3rem 1rem;text-align:center;transition:all .2s;background:#fff}
+.sector-tile:hover{border-color:var(--pg-green);background:var(--pg-green-pale)}
+.sector-tile svg{width:32px;height:32px;color:var(--pg-green);margin-bottom:.7rem;display:block;margin-left:auto;margin-right:auto}
+.sector-tile p{font-size:.88rem;font-weight:600;color:var(--pg-dark)}
+
+.cta-section{background:linear-gradient(135deg,#0a3d2b 0%,#0F6E56 100%);color:#fff;padding:5rem 2rem}
+.cta-inner{max-width:700px;margin:0 auto;text-align:center}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:800;margin-bottom:1rem;letter-spacing:-.5px}
+.cta-inner p{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:2rem;line-height:1.7}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.cta-email{font-size:14px;color:rgba(255,255,255,.7);margin-top:1.2rem}
+.cta-email a{color:#9FE1CB;text-decoration:none;font-weight:600}
+
+footer{background:var(--pg-dark);color:rgba(255,255,255,.7);padding:3rem 2rem 2rem}
+.footer-inner{max-width:1100px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
+.footer-brand p{font-size:.9rem;line-height:1.7;margin-top:.8rem;color:rgba(255,255,255,.55)}
+.footer-col h5{font-size:.85rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:.04em}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:.5rem}
+.footer-col a{text-decoration:none;color:rgba(255,255,255,.55);font-size:.88rem;transition:color .2s}
+.footer-col a:hover{color:#9FE1CB}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-bottom p{font-size:.82rem;color:rgba(255,255,255,.4)}
+
+/* Contact form */
+.contact-form{background:var(--pg-white);border:1px solid var(--pg-border);border-radius:20px;padding:2.5rem;margin-top:3rem;max-width:640px;margin-left:auto;margin-right:auto}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.form-group{display:flex;flex-direction:column;gap:.4rem}
+.form-group.full{grid-column:1/-1}
+.form-group label{font-size:.88rem;font-weight:600;color:var(--pg-text)}
+.form-group input,.form-group select,.form-group textarea{border:1px solid var(--pg-border);border-radius:8px;padding:.7rem 1rem;font-size:.92rem;font-family:'Inter',sans-serif;color:var(--pg-text);transition:border-color .2s;background:#fff}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--pg-green);box-shadow:0 0 0 3px rgba(15,110,86,.08)}
+.form-group textarea{resize:vertical;min-height:100px}
+.form-submit{background:var(--pg-green);color:#fff;border:none;padding:.8rem 2rem;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s;margin-top:1rem;width:100%}
+.form-submit:hover{background:var(--pg-green-light)}
+
+@media(max-width:768px){
+  .hero-inner{grid-template-columns:1fr;text-align:center}
+  .hero-visual{display:none}
+  .hero-stats{justify-content:center}
+  .why-grid{grid-template-columns:1fr}
+  .why-image{display:none}
+  .steps-grid{grid-template-columns:1fr;gap:2rem}
+  .steps-grid::before{display:none}
+  .footer-top{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .form-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="logo-lockup">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="white" opacity="0.9"/>
+          <path d="M9 12l2 2 4-4" stroke="#0F6E56" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <span class="logo-text">PlateGuard <span>India</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why us</a></li>
+      <li><a href="#how">Process</a></li>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get an audit</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;color:#9FE1CB"><circle cx="12" cy="12" r="10" opacity=".3"/><circle cx="12" cy="12" r="5"/></svg>
+        FSSAI-aligned food safety audits
+      </div>
+      <h1>India's food deserves a <em>guardian</em> at every plate</h1>
+      <p class="hero-sub">PlateGuard India delivers rigorous, science-backed food safety inspections and audits for restaurants, cloud kitchens, and food manufacturers in Mumbai and Pune.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Book a free consultation</a>
+        <a href="#services" class="btn-secondary">Our services ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">GLP</div>
+          <div class="stat-label">Certified methodology</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">FSSAI</div>
+          <div class="stat-label">Regulatory alignment</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">48h</div>
+          <div class="stat-label">Report turnaround</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="shield-visual">
+        <svg class="shield-svg" viewBox="0 0 280 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M140 20L30 65v75c0 70 46 131 110 150 64-19 110-80 110-150V65L140 20z" fill="white" opacity="0.12"/>
+          <path d="M140 35L45 76v64c0 63 41 118 95 135 54-17 95-72 95-135V76L140 35z" fill="white" opacity="0.18"/>
+          <path d="M140 50L60 87v53c0 56 35 105 80 120 45-15 80-64 80-120V87L140 50z" fill="white" opacity="0.3"/>
+          <circle cx="140" cy="148" r="55" fill="white" opacity="0.95"/>
+          <path d="M115 148l18 18 32-34" stroke="#0F6E56" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="92" cy="86" r="6" fill="white" opacity="0.4"/>
+          <circle cx="188" cy="86" r="4" fill="white" opacity="0.3"/>
+          <circle cx="78" cy="190" r="5" fill="white" opacity="0.35"/>
+          <circle cx="202" cy="190" r="6" fill="white" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z"/></svg>
+      FSSAI regulatory compliance
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      GLP-grade protocols
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      48-hour report turnaround
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:18px;height:18px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      6+ years analytical expertise
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="section-inner">
+    <div class="section-label">What we do</div>
+    <h2 class="section-title">Comprehensive food safety services</h2>
+    <p class="section-sub">From the kitchen floor to the lab, PlateGuard covers every link in your food safety chain.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        </div>
+        <h3>Restaurant & cloud kitchen audits</h3>
+        <p>Systematic inspection of hygiene practices, food handling, storage temperatures, cross-contamination controls, and FSSAI licence compliance.</p>
+        <span class="service-tag">Most popular</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        </div>
+        <h3>Food manufacturing inspections</h3>
+        <p>GMP and GHP audits aligned with FSSAI Schedule 4 standards — covering facilities, equipment, water quality, pest control, and traceability.</p>
+        <span class="service-tag">Manufacturers</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+        </div>
+        <h3>FSSAI compliance consulting</h3>
+        <p>Gap analysis against Schedule 4, documentation support, corrective action planning, and pre-inspection readiness assessments.</p>
+        <span class="service-tag">Consulting</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h3>Hygiene rating & benchmarking</h3>
+        <p>Independent hygiene scoring using standardised criteria — giving customers and stakeholders a trusted, transparent safety benchmark.</p>
+        <span class="service-tag">Transparency</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </div>
+        <h3>Staff safety training</h3>
+        <p>Practical, hands-on food safety and hygiene training for kitchen staff and managers — tailored to your operation's specific risk profile.</p>
+        <span class="service-tag">Training</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <h3>Incident investigation</h3>
+        <p>Rapid response root-cause analysis following foodborne illness events — with detailed reports to protect your business and your consumers.</p>
+        <span class="service-tag">Response</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why" style="background:var(--pg-bg)">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="section-label">Why PlateGuard</div>
+        <h2 class="section-title">Science-grade rigour, field-ready expertise</h2>
+        <p class="section-sub">Founded by an analytical chemist with 6+ years at a global agrochemical leader, using methods built for regulatory precision.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-num">1</div>
+            <div>
+              <h4>GLP-trained analytical methodology</h4>
+              <p>Every inspection follows GLP/OECD-aligned protocols — the same standards used in international regulatory submissions. No guesswork, no checklist theatre.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-num">2</div>
+            <div>
+              <h4>Instrument-backed findings</h4>
+              <p>We apply HPLC, LC-MS, and residue analysis expertise when test data matters — going deeper than visual inspection where the risk demands it.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-num">3</div>
+            <div>
+              <h4>Clear, actionable reports in 48 hours</h4>
+              <p>Every audit ends with a prioritised findings report and corrective action roadmap — no jargon, just the information you need to act immediately.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-num">4</div>
+            <div>
+              <h4>Independent and impartial</h4>
+              <p>PlateGuard India is a third-party auditor — no affiliation with suppliers, equipment vendors, or food brands. Your audit result is yours alone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-image">
+        <div class="cert-card">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <h5>FSSAI Schedule 4 alignment</h5>
+            <p>Inspections mapped to current regulatory requirements</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-dot" style="background:var(--pg-amber)"></div>
+          <div class="cert-info">
+            <h5>GLP / OECD methodology</h5>
+            <p>International-standard analytical protocols</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-dot"></div>
+          <div class="cert-info">
+            <h5>ISO 22000 awareness</h5>
+            <p>Food safety management systems context</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-dot" style="background:var(--pg-amber)"></div>
+          <div class="cert-info">
+            <h5>Documented audit trail</h5>
+            <p>Legally defensible records for all inspections</p>
+          </div>
+        </div>
+        <div style="margin-top:1rem;padding:1.2rem;background:var(--pg-green);border-radius:12px;text-align:center">
+          <p style="color:#fff;font-size:.85rem;font-weight:600;line-height:1.5">Currently serving Mumbai & Pune<br><span style="opacity:.8;font-weight:400">Expanding to all Maharashtra in 2025</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="how-section">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <div class="section-label">How it works</div>
+      <h2 class="section-title">From enquiry to clean bill of health</h2>
+      <p class="section-sub" style="margin:0 auto 3rem">A simple, transparent process — so you always know where you stand.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h4>Contact us</h4>
+        <p>Email safety@plateguardindia.info or fill the form below. We respond within one business day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h4>Scoping & proposal</h4>
+        <p>We define audit scope and send a fixed-fee proposal — no hidden charges.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h4>On-site inspection</h4>
+        <p>Thorough, scheduled inspection using standardised checklists and sampling protocols.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <h4>Report & action plan</h4>
+        <p>Risk-rated findings with a prioritised corrective action plan — delivered within 48 hours.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <h4>Follow-up support</h4>
+        <p>We check in on progress and offer a re-inspection to confirm full compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sectors">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <div class="section-label">Who we serve</div>
+      <h2 class="section-title">Every food business, covered</h2>
+    </div>
+    <div class="sectors-grid">
+      <div class="sector-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 10h18M5 6V4h14v2M5 20h14a2 2 0 002-2v-8H3v8a2 2 0 002 2z"/></svg>
+        <p>Restaurants</p>
+      </div>
+      <div class="sector-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3"/></svg>
+        <p>Cloud kitchens</p>
+      </div>
+      <div class="sector-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+        <p>Food manufacturers</p>
+      </div>
+      <div class="sector-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <p>Catering companies</p>
+      </div>
+      <div class="sector-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+        <p>Canteens & corporates</p>
+      </div>
+      <div class="sector-tile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M3 9h6M3 15h6"/></svg>
+        <p>Zomato / Swiggy partners</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--pg-bg)">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <div class="section-label">Get in touch</div>
+      <h2 class="section-title">Book your free consultation</h2>
+      <p class="section-sub" style="margin:0 auto">Tell us about your food business and we'll be in touch within one business day.</p>
+    </div>
+    <div class="contact-form">
+      <form action="mailto:safety@plateguardindia.info" method="POST" enctype="text/plain">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Rahul Sharma" required>
+          </div>
+          <div class="form-group">
+            <label for="business">Business name</label>
+            <input type="text" id="business" name="business" placeholder="Sharma's Kitchen" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="rahul@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label for="type">Business type</label>
+            <select id="type" name="type">
+              <option value="">Select type</option>
+              <option>Restaurant</option>
+              <option>Cloud kitchen</option>
+              <option>Food manufacturer</option>
+              <option>Catering company</option>
+              <option>Corporate canteen</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <select id="city" name="city">
+              <option value="">Select city</option>
+              <option>Mumbai</option>
+              <option>Pune</option>
+              <option>Other Maharashtra</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message">Tell us about your needs</label>
+            <textarea id="message" name="message" placeholder="What are you looking for? Any specific compliance concerns or upcoming inspections?"></textarea>
+          </div>
+        </div>
+        <button type="submit" class="form-submit">Send enquiry →</button>
+      </form>
+      <p style="text-align:center;margin-top:1.2rem;font-size:.85rem;color:var(--pg-muted)">Or write directly: <a href="mailto:safety@plateguardindia.info" style="color:var(--pg-green);font-weight:600">safety@plateguardindia.info</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="section-label" style="color:#9FE1CB">Protect your business</div>
+    <h2>One food safety incident can shut a business overnight.</h2>
+    <p>PlateGuard India helps you stay ahead — with science-led audits that give you confidence, not just paperwork. Your customers deserve it. Your business depends on it.</p>
+    <div class="cta-actions">
+      <a href="#contact" class="btn-primary">Book a free consultation</a>
+      <a href="mailto:safety@plateguardindia.info?subject=Pricing enquiry" class="btn-secondary">Request pricing</a>
+    </div>
+    <p class="cta-email">Direct line: <a href="mailto:safety@plateguardindia.info">safety@plateguardindia.info</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:8px">
+          <div class="logo-icon" style="width:30px;height:30px;border-radius:8px">
+            <svg viewBox="0 0 24 24" fill="none" style="width:18px;height:18px">
+              <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.35C17.25 22.15 21 17.25 21 12V7L12 2z" fill="white" opacity="0.9"/>
+              <path d="M9 12l2 2 4-4" stroke="#0F6E56" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span style="font-size:14px;font-weight:700;color:#fff">PlateGuard <span style="color:#9FE1CB">India</span></span>
+        </div>
+        <p>India's trusted partner for food safety audits, FSSAI compliance, and hygiene excellence — serving Mumbai and Pune with science-grade rigour.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Restaurant audits</a></li>
+          <li><a href="#services">Manufacturing inspections</a></li>
+          <li><a href="#services">FSSAI compliance</a></li>
+          <li><a href="#services">Hygiene rating</a></li>
+          <li><a href="#services">Staff training</a></li>
+          <li><a href="#services">Incident response</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:safety@plateguardindia.info">safety@plateguardindia.info</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#why">Why PlateGuard</a></li>
+          <li><a href="#sectors">Industries</a></li>
+          <li><a href="#contact">Book a consultation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 PlateGuard India. All rights reserved.</p>
+      <p>Mumbai · Pune · Maharashtra</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
